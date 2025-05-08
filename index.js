@@ -4,7 +4,11 @@ const app = express();
 
 const CLIENT_ID = 'YOUR_WEB_CLIENT_ID';
 const CLIENT_SECRET = 'YOUR_CLIENT_SECRET';
-const REDIRECT_URI = 'https://yourdomain.com/oauth2redirect'; // Must match Google Console
+const REDIRECT_URI = 'https://google-oauth-backend.vercel.app/oauth2redirect'; // Must match Google Console
+
+app.get('/', (req, res) => {
+    res.json({message: "Connected"});
+})
 
 app.get('/oauth2redirect', async (req, res) => {
   const code = req.query.code;
