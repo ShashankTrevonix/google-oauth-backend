@@ -27,6 +27,10 @@ app.get('/oauth2redirect', async (req, res) => {
   `);
 });
 
+app.get(`/com.example.google_signin_app_1://oauth2redirect`, (req, res) => {
+  res.json({message: "Saav marae"});
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`OAuth2 redirect server listening on port ${PORT}`);
