@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 
 app.get('/oauth2redirect', async (req, res) => {
   const code = req.query.code;
-  const redirectToApp = `com.your.package:/oauth2redirect?code=${code}`;
+  const redirectToApp = `com.example.google_signin_app_1:/oauth2redirect?code=${code}`;
   res.redirect(redirectToApp);
 });
 
